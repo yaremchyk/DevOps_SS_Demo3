@@ -14,7 +14,7 @@ variable "namespace" {
 
 variable "domain_name" {
   type = string
-  default = "demoapp.pp.ua"
+  default = "yaremchyk.pp.ua"
 }
 
 variable "route53_zone_id" {
