@@ -1,6 +1,6 @@
 variable "region" {
   type    = string
-  default = "eu-north-1"
+  default = "us-east-1"
 }
 
 variable "namespace" {
@@ -11,4 +11,8 @@ variable "namespace" {
 variable "service_name" {
   type    = string
   default = "demo3"
+}
+
+variable "key_pair_name" {
+  default = "ssh-key-pair"
 }
