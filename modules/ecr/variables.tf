@@ -11,7 +11,7 @@ variable "environment" {
 
 variable "service_name" {
   type = string
-  default = "store-web-app"
+  default = "demo3"
 }
 
 variable "ecr_force_delete" {

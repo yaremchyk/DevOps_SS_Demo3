@@ -1,5 +1,5 @@
 variable "region" {
-  default = "us-east-1"
+  default = "eu-north-1"
 }
 
 variable "namespace" {
@@ -25,7 +25,7 @@ variable "db_host" {
 variable "service_name" {
   description = "A Docker image-compatible name for the service"
   type        = string
-  default     = "store-web-application"
+  default     = "demo3"
 }
 
 variable "ecs_task_execution_role_arn" {
