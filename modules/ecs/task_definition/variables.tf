@@ -15,7 +15,7 @@ variable "environment" {
 
 variable "secret_name" {
   type    = string
-  default = "AppleStore/Db"
+  default = "Demo3/DB"
 }
 
 variable "db_host" {
