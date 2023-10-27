@@ -39,7 +39,7 @@ variable "ecs_task_iam_role_arn" {
 variable "container_port" {
   description = "Port of the container"
   type        = number
-  default     = 80
+  default     = 8002
 }
 
 variable "cpu_units" {
