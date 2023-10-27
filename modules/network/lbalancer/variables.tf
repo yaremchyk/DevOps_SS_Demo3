@@ -19,6 +19,7 @@ variable "domain_name" {
 
 variable "route53_zone_id" {
   type = string
+  default = "Z091290221DJ8B3NJO3W5"
 }
 
 variable "environment" {
