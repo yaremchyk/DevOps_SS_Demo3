@@ -6,14 +6,13 @@ terraform {
 # 	}
 #   }
 
-#   backend "s3" {
-#     bucket            = "trfm-ste-bkt-final1"
-#     key               = "global1/mystatefile/terraform.tfstate"
-#     region            = "eu-north-1"
-#     dynamodb_table    = "terraform-lock1"
-#     encrypt           = true
+  backend "remote" {
+    organization = "demo3"
+	workspaces {
+  	name = "demo-workspace"
+	}
     
-#   }
+  }
   
   required_providers {
     aws = {
