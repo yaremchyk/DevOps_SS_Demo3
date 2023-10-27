@@ -5,7 +5,7 @@ variable "instance_class" {
 
 variable "secret_name" {
     type = string
-    default = "AppleStore/Db"
+    default = "Demo3/DB"
 }
 
 variable "security_group_db_id" {

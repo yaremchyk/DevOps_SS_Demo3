@@ -10,7 +10,7 @@ locals {
 
 resource "aws_db_instance" "rds_db" {
   allocated_storage    = 15
-  identifier           = "apple-store-db"
+  identifier           = "demo3-db"
   db_name              = local.db_creds.DbName
   engine               = "mysql"
   engine_version       = "5.7"
