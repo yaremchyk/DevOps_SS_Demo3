@@ -1,10 +1,10 @@
 terraform {
-    cloud {
-	organization = "demo3_org"
-	workspaces {
-  	name = "demo-workspace"
-	}
-  }
+#     cloud {
+# 	organization = "demo3_org"
+# 	workspaces {
+#   	name = "demo-workspace"
+# 	}
+#   }
 
   
   
