@@ -80,7 +80,7 @@ module "aws_launch_template" {
 }
 
 module "aws_ecs_service" {
-  source                   = "/modules/ecs/service"
+  source                   = "./modules/ecs/service"
   namespace                = var.namespace
   service_name             = var.service_name
   ecs_cluster_default_name = module.aws_ecs_cluster.ecs_cluster_name
