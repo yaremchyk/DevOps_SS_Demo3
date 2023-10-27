@@ -45,14 +45,7 @@ resource "aws_ecs_task_definition" "default" {
           value : local.db_creds.DbPassword
         }
       ]
-      logConfiguration = {
-        logDriver = "awslogs",
-        options = {
-          
-          "awslogs-region"        = var.region,
-          "awslogs-stream-prefix" = "app"
-        }
-      }
+      
     }
   ])
 }
