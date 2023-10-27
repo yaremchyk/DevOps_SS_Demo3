@@ -7,7 +7,7 @@ terraform {
 #   }
 
   backend "remote" {
-    organization = "demo3"
+    organization = "demo3_org"
 	workspaces {
   	name = "demo-workspace"
 	}
