@@ -4,7 +4,7 @@ terraform {
 	workspaces {
   	name = "demo-workspace"
 	}
-    token = "HFBdwU076gXgKg.atlasv1.AggH0D35AuOyjcOAG55O11CX8ebZJstLIcsRKqviS9rGd1EocQfzfuCS3tsgmPPrqAQ"
+    token = "Ym1Wc2zT05t2cg.atlasv1.r5USoZqn351nhBacqD1jrYkSKht887IqbWn0KCZzyKZH6HLXztUH1OxykAmuXuoP3fE"
   }
 
   
