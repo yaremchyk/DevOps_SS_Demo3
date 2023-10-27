@@ -12,10 +12,7 @@ terraform {
     region            = "eu-north-1"
     dynamodb_table    = "terraform-lock"
     encrypt           = true
-    organization = "demo3_org"
-	workspaces {
-  	name = "demo-workspace"
-	}
+    
   }
   
   required_providers {
