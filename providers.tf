@@ -1,10 +1,10 @@
-# terraform {
-# #     cloud {
-# # 	organization = "demo3_org"
-# # 	workspaces {
-# #   	name = "demo-workspace"
-# # 	}
-# #   }
+terraform {
+    cloud {
+	organization = "demo3_org"
+	workspaces {
+  	name = "demo-workspace"
+	}
+  }
 
   
   
@@ -16,7 +16,7 @@
 #   }
 
 #   required_version = ">= 1.2.0"
-# }
+}
 
 provider "aws" {
   region = "eu-north-1"
