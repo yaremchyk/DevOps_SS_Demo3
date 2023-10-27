@@ -17,12 +17,7 @@ terraform {
   	name = "demo-workspace"
 	}
   }
-  backend "remote" {
-    organization = "demo3_org"
-	workspaces {
-  	name = "demo-workspace"
-	}
-  }
+  
   required_providers {
     aws = {
       source  = "hashicorp/aws"
