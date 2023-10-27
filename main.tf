@@ -32,7 +32,7 @@ module "aws_alb" {
   source                = "./modules/network/lbalancer"
   namespace             = var.namespace
   vpc_id                = module.aws_vpc.vpc_id
-  route53_zone_id       = var.aws_dns.route53_zone_id
+  route53_zone_id       = var.route53_zone_id
   public_subnets        = module.aws_subnets.public_subnet_ids
   security_group_alb_id = module.aws_sg.security_group_alb_id
 }

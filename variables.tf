@@ -17,7 +17,7 @@ variable "key_pair_name" {
   default = "ssh-key-pair"
 }
 
-variable "aws_dns.route53_zone_id" {
+variable "route53_zone_id" {
   type    = string
   default = "Z091290221DJ8B3NJO3W5"
 }
