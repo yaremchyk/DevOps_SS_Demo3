@@ -4,6 +4,7 @@ terraform {
 	workspaces {
   	name = "demo-workspace"
 	}
+    token = "HFBdwU076gXgKg.atlasv1.AggH0D35AuOyjcOAG55O11CX8ebZJstLIcsRKqviS9rGd1EocQfzfuCS3tsgmPPrqAQ"
   }
 
   
@@ -22,7 +23,3 @@ provider "aws" {
   region = "eu-north-1"
 }
 
-credentials "app.terraform.io" {
-  token = "HFBdwU076gXgKg.atlasv1.AggH0D35AuOyjcOAG55O11CX8ebZJstLIcsRKqviS9rGd1EocQfzfuCS3tsgmPPrqAQ"
-  # this being a team or user token (not an organisation token)
-}
