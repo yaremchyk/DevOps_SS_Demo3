@@ -1,13 +1,13 @@
 terraform {
     
 
-#   backend "s3" {
-#     bucket            = "trfm-ste-bkt-final"
-#     key               = "global/mystatefile/terraform.tfstate"
-#     region            = "eu-north-1"
-#     dynamodb_table    = "terraform-lock"
-#     encrypt           = true
-#   }
+  backend "s3" {
+    bucket            = "trfm-ste-bkt-final"
+    key               = "global/mystatefile/terraform.tfstate"
+    region            = "eu-north-1"
+    dynamodb_table    = "terraform-lock"
+    encrypt           = true
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
