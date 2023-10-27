@@ -72,7 +72,7 @@ module "aws_ecs_task_defenition" {
 }
 
 module "aws_launch_template" {
-  source                        = "./modules/ecs/launch_template"
+  source                        = "./modules/ecs/launch_teamplate"
   namespace                     = var.namespace
   ecs_cluster_name              = module.aws_ecs_cluster.ecs_cluster_name
   security_group_ec2_id         = module.aws_sg.security_group_ec2_id
