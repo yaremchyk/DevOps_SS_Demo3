@@ -53,7 +53,3 @@ variable "memory" {
   default     = 256
   type        = number
 }
-
-variable "log_group_name" {
-  type = string
-}

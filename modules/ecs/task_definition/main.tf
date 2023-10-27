@@ -48,7 +48,7 @@ resource "aws_ecs_task_definition" "default" {
       logConfiguration = {
         logDriver = "awslogs",
         options = {
-          "awslogs-group"         = var.log_group_name,
+          
           "awslogs-region"        = var.region,
           "awslogs-stream-prefix" = "app"
         }
