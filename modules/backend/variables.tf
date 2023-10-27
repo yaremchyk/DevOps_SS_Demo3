@@ -1,13 +1,13 @@
 variable "bucket_name" {
   description = "The name of the S3 bucket. Must be globally unique."
   type        = string
-  default     = "trfm-ste-bkt-final"
+  default     = "trfm-ste-bkt-final1"
 }
 
 variable "table_name" {
   description = "The name of the DynamoDB table."
   type        = string
-  default     = "terraform-lock"
+  default     = "terraform-lock1"
 }
 
 variable "region" {
