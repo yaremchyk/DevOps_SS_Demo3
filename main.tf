@@ -51,7 +51,7 @@ module "aws_iam" {
 }
 
 module "aws_db" {
- source               = "./modules/aws_db"
+ source               = "./modules/db"
  security_group_db_id = module.aws_sg.security_group_db_id
  db_subnet_group_id   = module.aws_subnets.db_subnet_group_id
 }
