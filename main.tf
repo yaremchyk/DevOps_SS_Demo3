@@ -66,7 +66,6 @@ module "aws_ecs_task_defenition" {
   source                      = "./modules/ecs/task_definition"
   namespace                   = var.namespace
   db_host                     = module.aws_db.db_instance_endpoint
-  log_group_name              = module.aws_cloud_watch_logs.log_group_name
   ecs_task_execution_role_arn = module.aws_iam.ecs_task_execution_role_arn
   ecs_task_iam_role_arn       = module.aws_iam.ecs_task_iam_role_arn
 }
