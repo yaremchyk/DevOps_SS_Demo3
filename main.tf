@@ -38,12 +38,12 @@ module "aws_alb" {
 }
 
 
-module "aws_bastion_host" {
-  source                         = "/modules/ec2"
-  namespace                      = var.namespace
-  public_subnet_id               = module.aws_subnets.public_subnet_ids[0]
-  security_group_bastion_host_id = module.aws_sg.security_group_bastion_host_id
-}
+# module "aws_bastion_host" {
+#  source                         = "/modules/ec2"
+#  namespace                      = var.namespace
+#  public_subnet_id               = module.aws_subnets.public_subnet_ids[0]
+#  security_group_bastion_host_id = module.aws_sg.security_group_bastion_host_id
+# }
 
 module "aws_iam" {
   source    = "../modules/iam"
