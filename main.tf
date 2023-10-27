@@ -1,6 +1,4 @@
-provider "aws" {
-  region = var.region
-}
+
 
 module "aws_ecr" {
    source    = "./modules/ecr"
