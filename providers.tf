@@ -1,18 +1,18 @@
 terraform {
     cloud {
-	organization = "my-tfc-org"
+	organization      = "my-tfc-org"
 	workspaces {
-  	name = "demo-workspace"
+  	name              = "demo-workspace"
 	}
   }
 
-  backend "s3" {
-    bucket            = "trfm-ste-bkt-final"
-    key               = "global/mystatefile/terraform.tfstate"
-    region            = "eu-north-1"
-    dynamodb_table    = "terraform-lock"
-    encrypt           = true
-  }
+#   backend "s3" {
+#     bucket            = "trfm-ste-bkt-final"
+#     key               = "global/mystatefile/terraform.tfstate"
+#     region            = "eu-north-1"
+#     dynamodb_table    = "terraform-lock"
+#     encrypt           = true
+#   }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
