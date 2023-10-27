@@ -1,5 +1,10 @@
 terraform {
-    
+    cloud {
+	organization = "demo3_org"
+	workspaces {
+  	name = "demo-workspace"
+	}
+  }
 
   backend "s3" {
     bucket            = "trfm-ste-bkt-final"
