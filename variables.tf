@@ -21,3 +21,8 @@ variable "route53_zone_id" {
   type    = string
   default = "Z091290221DJ8B3NJO3W5"
 }
+
+variable "secret_name" {
+    type = string
+    default = "Demo3/Creds"
+}
