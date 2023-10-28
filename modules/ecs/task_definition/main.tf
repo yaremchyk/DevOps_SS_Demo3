@@ -23,28 +23,28 @@ resource "aws_ecs_task_definition" "default" {
       portMappings = [
         {
           containerPort = var.container_port
-          hostPort      = 80
+          hostPort      = 8002
           protocol      = "tcp"
         }
       ]
-      environment : [
-        {
-          name : "DbName",
-          value : local.db_creds.DbName
-        },
-        {
-          name : "DbUsername",
-          value : local.db_creds.DbUsername
-        },
-        {
-          name : "DbHost",
-          value : var.db_host
-        },
-        {
-          name : "DbPassword",
-          value : local.db_creds.DbPassword
-        }
-      ]
+      # environment : [
+      #   {
+      #     name : "DbName",
+      #     value : local.db_creds.DbName
+      #   },
+      #   {
+      #     name : "DbUsername",
+      #     value : local.db_creds.DbUsername
+      #   },
+      #   {
+      #     name : "DbHost",
+      #     value : var.db_host
+      #   },
+      #   {
+      #     name : "DbPassword",
+      #     value : local.db_creds.DbPassword
+      #   }
+      # ]
       
     }
   ])
