@@ -6,14 +6,21 @@ terraform {
       version = "4.67.0"
     }
   }
+      cloud {
+ 	organization = "demo3_org"
+	workspaces {
+  	name = "demo-workspace"
+
+     }
+   }
 
   required_version = ">= 1.2.0"
 }
 
 provider "aws" {
   region = "eu-north-1"
-  access_key = local.creds.ACCESS_KEY_ID
-  secret_key = local.creds.SECRET.ACCESS.KEY
+  # access_key = local.creds.ACCESS_KEY_ID
+  # secret_key = local.creds.SECRET.ACCESS.KEY
 
 }
 
