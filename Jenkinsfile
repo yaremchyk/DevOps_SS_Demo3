@@ -19,7 +19,7 @@ pipeline {
                 echo "Network module plan..."
                 sh ('sudo terraform plan -target="module.aws_vpc"') 
                 sh ('sudo terraform plan -target="module.aws_subnets"')
-                sh ('sudo terraform plan -target="module.aws_sg')
+                sh ('sudo terraform plan -target="module.aws_sg"')
                 sh ('sudo  terraform plan -target="module.aws_alb"')
                 sh ('sudo  terraform plan -target="module.aws_dns"')
             }
