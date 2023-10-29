@@ -64,5 +64,12 @@ pipeline {
             }
         }    
 
+        stage ("Apply") {
+            steps {
+                echo "IAM module plan..."
+                sh ('sudo terraform apply') 
+            }
+        } 
+
 }
 }
