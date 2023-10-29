@@ -9,6 +9,10 @@ module "aws_vpc" {
   source    = "./modules/network/vpc"
   namespace = var.namespace
 }
+module "aws_backend" {
+  source    = "./modules/backend"
+  vpc_id              = module.aws_vpc.vpc_id
+}
 
 module "aws_subnets" {
   source              = "./modules/network/subnets"
@@ -63,7 +67,7 @@ module "aws_ecs_cluster" {
 module "aws_ecs_task_defenition" {
   source                      = "./modules/ecs/task_definition"
   namespace                   = var.namespace
-  db_host                     = module.aws_db.db_instance_endpoint
+  db_host                     = demo3-db.cbb27t62lh3e.eu-north-1.rds.amazonaws.com
   ecs_task_execution_role_arn = module.aws_iam.ecs_task_execution_role_arn
   ecs_task_iam_role_arn       = module.aws_iam.ecs_task_iam_role_arn
 }
