@@ -13,7 +13,7 @@ variable "table_name" {
 variable "region" {
     description = "The name of the region where we're working."
     type        = string
-    default     = "eu-north-1"
+    default     = "us-east-1"
 }
 
 variable "vpc_id" {
