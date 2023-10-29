@@ -8,13 +8,6 @@ pipeline {
             }
         }
 
-        stage ("Login") {
-            steps {
-                echo "Terraform init..."
-                sh ("sudo su ubuntu") 
-            }
-        }
-
         stage ("Terraform init") {
             steps {
                 echo "Terraform init..."
@@ -24,17 +17,17 @@ pipeline {
         stage ("Network module plan") {
             steps {
                 echo "Network module plan..."
-                sh ('terraform plan -target="module.aws_vpc"') 
-                sh ('terraform plan -target="module.aws_subnets"')
-                sh ('terraform plan -target="module.aws_sg')
-                sh ('terraform plan -target="module.aws_alb"')
-                sh ('terraform plan -target="module.aws_dns"')
+                sh ('sudo terraform plan -target="module.aws_vpc"') 
+                sh ('sudo terraform plan -target="module.aws_subnets"')
+                sh ('sudo terraform plan -target="module.aws_sg')
+                sh ('sudo  terraform plan -target="module.aws_alb"')
+                sh ('sudo  terraform plan -target="module.aws_dns"')
             }
         }
         stage ("Backend module plan") {
             steps {
                 echo "EC2 module plan..."
-                sh ('terraform plan -target="module.aws_backend"') 
+                sh ('sudo  terraform plan -target="module.aws_backend"') 
                 
             }
         }
@@ -50,24 +43,24 @@ pipeline {
         stage ("ECR module plan") {
             steps {
                 echo "ECR module plan..."
-                sh ('terraform plan -target="module.aws_ecr"') 
+                sh ('sudo terraform plan -target="module.aws_ecr"') 
             }
         }
 
         stage ("ECS module plan") {
             steps {
                 echo "ECS module plan..."
-                sh ('terraform plan -target="module.aws_ecs_cluster"') 
-                sh ('terraform plan -target="module.aws_ecs_task_defenition"') 
-                sh ('terraform plan -target="module.aws_ecs_service"') 
-                sh ('terraform plan -target="module.aws_launch_template"') 
+                sh ('sudo terraform plan -target="module.aws_ecs_cluster"') 
+                sh ('sudo terraform plan -target="module.aws_ecs_task_defenition"') 
+                sh ('sudo terraform plan -target="module.aws_ecs_service"') 
+                sh ('sudo terraform plan -target="module.aws_launch_template"') 
             }
         }
 
         stage ("IAM module plan") {
             steps {
                 echo "IAM module plan..."
-                sh ('terraform plan -target="module.aws_iam"') 
+                sh ('sudo terraform plan -target="module.aws_iam"') 
             }
         }    
 
