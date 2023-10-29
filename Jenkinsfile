@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'ci-server' }
+    agent { node { label 'master' } }
 
     stages {
         stage('Checkout') {
