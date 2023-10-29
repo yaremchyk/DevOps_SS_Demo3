@@ -11,7 +11,7 @@ pipeline {
         stage ("Terraform init") {
             steps {
                 echo "Terraform init..."
-                sh ("terraform init ") 
+                sh ("terraform init -ugrade") 
             }
         }
         stage ("Network module plan") {
