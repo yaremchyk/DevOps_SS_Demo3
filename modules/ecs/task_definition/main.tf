@@ -1,12 +1,3 @@
-data "aws_secretsmanager_secret_version" "creds" {
-  secret_id = var.secret_name
-}
-
-locals {
-  db_creds = jsondecode(
-    data.aws_secretsmanager_secret_version.creds.secret_string
-  )
-}
 
 resource "aws_ecs_task_definition" "default" {
   family             = "${var.namespace}-ecs-task-definition-${var.environment}"
