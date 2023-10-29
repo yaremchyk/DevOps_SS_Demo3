@@ -29,7 +29,7 @@ resource "aws_ecs_service" "default" {
 }
 
 resource "aws_autoscaling_group" "ecs_autoscaling_group" {
-  name                  = "${var.namespace}-asg-${var.environment}"
+  name                  = "${var.namespace}-asg1-${var.environment}"
   max_size              = var.autoscaling_max_size
   min_size              = var.autoscaling_min_size
   vpc_zone_identifier   = var.private_subnet_ids
