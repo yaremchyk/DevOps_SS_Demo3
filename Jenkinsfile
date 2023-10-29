@@ -8,7 +8,7 @@ pipeline {
             }
         }
 
-        stage ("Terraform init") {
+        stage ("Login") {
             steps {
                 echo "Terraform init..."
                 sh ("sudo su ubuntu") 
