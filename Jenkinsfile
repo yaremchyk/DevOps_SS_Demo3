@@ -7,6 +7,14 @@ pipeline {
                 checkout scm
             }
         }
+
+        stage('Login to cloud') {
+            steps {
+                sh 'terraform login'
+                sh 'echo yes'
+                sh 'echo YLz4Lk9BJoXnyw.atlasv1.bD4LpcjdKVybhtVhRAcdWAMogl5mtEFf4iAIyvNdU4xyfUN24ImVzSwSowJfWMJtjE4'
+            }
+        }
     
         stage ("Terraform init") {
             steps {
