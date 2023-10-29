@@ -32,13 +32,13 @@ pipeline {
             }
         }
 
-        stage ("EC2 module plan") {
-            steps {
-                echo "EC2 module plan..."
-                sh ('terraform plan -target="module.aws_bastion_host"') 
+        // stage ("EC2 module plan") {
+        //     steps {
+        //         echo "EC2 module plan..."
+        //         sh ('terraform plan -target="module.aws_bastion_host"') 
                 
-            }
-        }
+        //     }
+        // }
 
         stage ("ECR module plan") {
             steps {
