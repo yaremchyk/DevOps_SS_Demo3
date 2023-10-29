@@ -1,24 +1,10 @@
 pipeline {
-    agent any
+    agent { label 'ci-server' }
 
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
-            }
-        }
-
-        stage('Login to cloud') {
-            steps {
-                - envsubst < terraformrc > ~/.terraformrc
-            }
-        }
-
-        stage('Login to cloud') {
-            steps {
-                sh 'terraform login'
-                echo "yes"
-                echo "echo YLz4Lk9BJoXnyw.atlasv1.bD4LpcjdKVybhtVhRAcdWAMogl5mtEFf4iAIyvNdU4xyfUN24ImVzSwSowJfWMJtjE4"
             }
         }
     
