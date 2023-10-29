@@ -17,7 +17,7 @@ pipeline {
         stage ("Network module plan") {
             steps {
                 echo "Network module plan..."
-                sh ('terraform plan -target="module.aws_vpc"') 
+                sh ('sudo terraform plan -target="module.aws_vpc"') 
                 sh ('terraform plan -target="module.aws_subnets"')
                 sh ('terraform plan -target="module.aws_sg')
                 sh ('terraform plan -target="module.aws_alb"')
