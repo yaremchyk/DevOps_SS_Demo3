@@ -54,25 +54,7 @@ resource "aws_iam_role_policy" "ecs_service_role_policy" {
 data "aws_iam_policy_document" "ecs_service_role_policy" {
   statement {
     effect = "Allow"
-    actions = [
-      "ec2:AuthorizeSecurityGroupIngress",
-      "ec2:Describe*",
-      "elasticloadbalancing:DeregisterInstancesFromLoadBalancer",
-      "elasticloadbalancing:DeregisterTargets",
-      "elasticloadbalancing:Describe*",
-      "elasticloadbalancing:RegisterInstancesWithLoadBalancer",
-      "elasticloadbalancing:RegisterTargets",
-      "ec2:DescribeTags",
-      "logs:CreateLogGroup",
-      "logs:CreateLogStream",
-      "logs:DescribeLogStreams",
-      "logs:PutSubscriptionFilter",
-      "logs:PutLogEvents",
-      "iam:AttachRolePolicy",
-			"iam:CreateRole",
-			"iam:CreatePolicy",
-			"iam:PutRolePolicy"
-    ]
+    actions = ["*"]
     resources = ["*"]
   }
 }
