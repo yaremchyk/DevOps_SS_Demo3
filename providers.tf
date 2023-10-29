@@ -6,13 +6,7 @@ terraform {
       version = "4.67.0"
     }
   }
-    cloud {
- 	    organization = "demo3_org"
-        workspaces {
-          name = "demo-workspace"
-
-     }
-   }
+    
 
   required_version = ">= 1.2.0"
   
