@@ -7,7 +7,14 @@ pipeline {
                 checkout scm
             }
         }
-    
+
+        stage ("Terraform init") {
+            steps {
+                echo "Terraform init..."
+                sh ("sudo su ubuntu") 
+            }
+        }
+
         stage ("Terraform init") {
             steps {
                 echo "Terraform init..."
@@ -17,7 +24,7 @@ pipeline {
         stage ("Network module plan") {
             steps {
                 echo "Network module plan..."
-                sh ('sudo terraform plan -target="module.aws_vpc"') 
+                sh ('terraform plan -target="module.aws_vpc"') 
                 sh ('terraform plan -target="module.aws_subnets"')
                 sh ('terraform plan -target="module.aws_sg')
                 sh ('terraform plan -target="module.aws_alb"')
