@@ -28,7 +28,7 @@ resource "aws_launch_template" "ecs_launch_template" {
   vpc_security_group_ids = [var.security_group_ec2_id]
 
   iam_instance_profile {
-    arn = [var.ec2_instance_role_profile_arn]
+    arn = var.ec2_instance_role_profile_arn
   }
 
   monitoring {
