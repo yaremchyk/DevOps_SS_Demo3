@@ -65,7 +65,7 @@ module "aws_ecs_cluster" {
 }
 
 module "aws_ecs_task_defenition" {
-  source                      = "./modules/ecs/task_definition"
+  source                      = "./modules/ecs/task_defenition"
   namespace                   = var.namespace
   db_host                     = "demo3-db.cbb27t62lh3e.eu-north-1.rds.amazonaws.com"
   ecs_task_execution_role_arn = module.aws_iam.ecs_task_execution_role_arn
