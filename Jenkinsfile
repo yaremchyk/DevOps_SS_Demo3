@@ -66,8 +66,15 @@ pipeline {
 
         stage ("Apply") {
             steps {
-                echo "IAM module plan..."
+                echo "Apply"
                 // sh ('sudo terraform apply --auto-approve') 
+            }
+        } 
+
+        stage ("Trigger App build") {
+            steps {
+                echo "Trigger App Build"
+                build 'Demo3' 
             }
         } 
 
