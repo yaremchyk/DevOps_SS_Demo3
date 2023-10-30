@@ -77,7 +77,7 @@ module "aws_launch_template" {
   namespace                     = var.namespace
   ecs_cluster_name              = module.aws_ecs_cluster.ecs_cluster_name
   security_group_ec2_id         = module.aws_sg.security_group_ec2_id
-  ec2_instance_role_profile_arn = "arn:aws:iam::025389115636:role/dev-ec2-instance-role-profile-staging"
+  ec2_instance_role_profile_arn = var.ec2_instance_role_profile_arn
 }
 
 module "aws_ecs_service" {
