@@ -72,13 +72,6 @@ module "aws_ecs_task_defenition" {
   ecs_task_iam_role_arn       = module.aws_iam.ecs_task_iam_role_arn
 }
 
-module "aws_launch_template" {
-  source                        = "./modules/ecs/launch_teamplate"
-  namespace                     = var.namespace
-  ecs_cluster_name              = module.aws_ecs_cluster.ecs_cluster_name
-  security_group_ec2_id         = module.aws_sg.security_group_ec2_id
-  ec2_instance_role_profile_arn = var.ec2_instance_role_profile_arn
-}
 
 module "aws_ecs_service" {
   source                   = "./modules/ecs/service"
@@ -91,4 +84,12 @@ module "aws_ecs_service" {
   service_target_group_arn = module.aws_alb.service_target_group_arn
   task_definition_arn      = module.aws_ecs_task_defenition.task_definition_arn
   private_subnet_ids       = module.aws_subnets.private_subnet_ids
+}
+
+module "aws_launch_template" {
+  source                        = "./modules/ecs/launch_teamplate"
+  namespace                     = var.namespace
+  ecs_cluster_name              = module.aws_ecs_cluster.ecs_cluster_name
+  security_group_ec2_id         = module.aws_sg.security_group_ec2_id
+  ec2_instance_role_profile_arn = module.aws_iam.ec2_instance_role_profile_arn
 }
