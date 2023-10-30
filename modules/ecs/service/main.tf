@@ -28,11 +28,6 @@ resource "aws_ecs_service" "default" {
   }
 }
 
-output "ecs_service_name" {
-  value = aws_ecs_service.default.name
-}
-
-
 resource "aws_appautoscaling_target" "ecs_target" {
   max_capacity       = var.ecs_task_max_count
   min_capacity       = var.ecs_task_min_count
