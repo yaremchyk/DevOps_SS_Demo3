@@ -71,12 +71,12 @@ pipeline {
             }
         } 
 
-        stage ("Trigger App build") {
-            steps {
-                echo "Trigger App Build"
-                build 'Demo3' 
-            }
-        } 
+        // stage ("Trigger App build") {
+        //     steps {
+        //         echo "Trigger App Build"
+        //         build 'Demo3' 
+        //     }
+        // } 
 
 }
 }
