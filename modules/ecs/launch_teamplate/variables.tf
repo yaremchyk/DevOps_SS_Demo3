@@ -11,7 +11,7 @@ variable "environment" {
 
 variable "ec2_instance_role_profile_arn" {
   type = string
-  default = "arn:aws:iam::025389115636:role/dev-ec2-instance-role-profile-staging"
+  
 }
 
 #variable "key_pair_name" {
