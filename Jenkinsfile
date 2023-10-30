@@ -16,13 +16,21 @@ pipeline {
         }
         stage ("Network module plan") {
             steps {
+        script {
+            try {
                 echo "Network module plan..."
                 sh ('sudo terraform plan -target="module.aws_vpc"') 
                 sh ('sudo terraform plan -target="module.aws_subnets"')
                 sh ('sudo terraform plan -target="module.aws_sg"')
                 sh ('sudo  terraform plan -target="module.aws_alb"')
                 sh ('sudo  terraform plan -target="module.aws_dns"')
+            } catch (err) {
+                echo err.getMessage()
             }
+        }
+        echo currentBuild.result
+    }
+            
         }
         stage ("Backend module plan") {
             steps {
